@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso JQuery</title>
+</head>
+<body>
+	
+	<!-- Conteudo -->
+
+	<h1 id="cor">Cabeçalho que muda de cor</h1>
+
+	<button>Mudar cor</button>
+	<a href="#">Mudar cor</a>
+	
+
+
+	<!-- Jquery -->
+	<script src="../jquery-3.1.1.js"></script>
+	<!-- Programação do script -->
+	<script>
+
+		/**
+		 * document.ready
+		 * 
+		 * Faz o script contido executar somente apos o carregamento total do documento. Caso seja colocado no final do documento, proximo ao fechamento da tag body, nao é necessário. Somente se for colocado na tag head, pois tentara acessar algum elemento do DOM que ainda não foi carregado.
+		 */
+
+		$(document).ready(function() {
+			$('button').click(function () {
+				$('#cor').css('color', 'red');
+			});
+		});
+
+		//Sintaxe abreviada
+		$(function() {
+			$('a').click(function() {
+				$('#cor').css('color', 'blue')
+			});
+		});
+
+
+	</script>
+</body>
+</html>
